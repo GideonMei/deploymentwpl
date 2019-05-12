@@ -9,13 +9,20 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy:gh": "ng build --prod --base-href='https://GideonMei.github.io/followers-app/' && ngh" 
+    "deploy:gh": "ng build --prod --base-href='https://GideonMei.github.io/followers-app/' && ngh",
+    "postinstall": "ng build --output-path deploymentpwl-app --aot --prod"
+  },
+  "engines": {
+    "node": "v10.115.1",
+    "npm": "6.4.1"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.0.0",
+    "@angular/cli": "1.2.4",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
     "@angular/core": "^4.0.0",
     "@angular/forms": "^4.0.0",
     "@angular/http": "^4.0.0",
@@ -24,7 +31,10 @@
     "@angular/router": "^4.0.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "express": "^4.16.4",
+    "path": "^0.12.7",
     "rxjs": "^5.4.1",
+    "typescript": "~2.3.3",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
